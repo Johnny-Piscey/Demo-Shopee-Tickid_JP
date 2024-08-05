@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-6.5.2-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +19,9 @@
     <div class="app">
         <!-- Header -->
         <header class="header">
-            <div class="grid">
+            <div class="grid wide">
                 <!-- Navigation bar -->
-                <nav class="header__navbar">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header--hover-show-items header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng
@@ -145,7 +147,75 @@
 
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+
+                    <div class="header__mobile-icon-wrapper">
+                            <!-- Mobile side category -->
+                        <label for="mobile-category-checkbox" class="header__mobile-side-category-menu hide-on-pc hide-on-tablet">
+                            <i class="header__mobile-category-icon fa-solid fa-bars"></i>
+                        </label>
+                        <input type="checkbox" hidden id="mobile-category-checkbox" class="header__mobile-icon-checkbox">
+                        
+                        <label for="mobile-category-checkbox" class="header__mobile-category-overlay"></label>
+
+                        <div class="header__mobile-side-category">
+                            <h3 class="header__mobile-side-category-heading">Tất cả sản phẩm</h3>
+                            <ul class="header__mobile-side-category-list">
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm mặt Trang điểm mặt Trang điểm mặt Trang điểm mặt Trang điểm mặt</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm môi</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm mắt</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm mặt Trang điểm mặt Trang điểm mặt Trang điểm mặt Trang điểm mặt</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm môi</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm mắt</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm mặt Trang điểm mặt Trang điểm mặt Trang điểm mặt Trang điểm mặt</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm môi</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm mắt</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm mặt Trang điểm mặt Trang điểm mặt Trang điểm mặt Trang điểm mặt</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm môi</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm mắt</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm mặt Trang điểm mặt Trang điểm mặt Trang điểm mặt Trang điểm mặt</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm môi</a>
+                                </li>
+                                <li class="header__mobile-side-category-item">
+                                    <a href="#" class="header__mobile-side-category-link">Trang điểm mắt</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Mobile Search input bar -->
+                        <label for="mobile-search-checkbox" class="header__mobile-search hide-on-pc hide-on-tablet">
+                            <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </div>
+
+                    <!-- Header Logo -->
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -157,6 +227,8 @@
                             </svg>
                         </a>
                     </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
 
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -267,19 +339,34 @@
                                 </ul>
 
                                 <a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
-
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
+
+            <ul class="header__sort-bar">
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="#" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="#" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="#" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="#" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
 
+        <!-- Content -->
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
     
                             <h3 class="category__heading">Danh mục</h3>
@@ -298,9 +385,9 @@
                         </nav>
                     </div>
     
-                    <div class="grid__column-10">
+                    <div class="col l-10 m-12 c-12">
                         <!-- Thanh điều hướng sản phẩm -->
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -337,11 +424,53 @@
                             </div>
                         </div>
 
+                        <!-- Mobile navigation category -->
+                         <nav class="mobile-category hide-on-pc">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                            </ul>
+                         </nav>
+
                         <!-- Danh sách sản phẩm -->
                          <div class="home-product">
-                            <div class="grid__row">
-                                <!-- Product item -->
-                                <div class="grid__colum-2-4 home-product-item-wrapper">
+                            <div class="row sm-gutter">
+                                <!-- Product items -->
+                                <div class="col l-2-4 m-4 c-6 home-product-item-wrapper">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwz4r2fs9plne1_tn.webp);">
                                             <!-- <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwz4r2fs9plne1_tn.webp" alt="Product image"> -->
@@ -384,7 +513,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__colum-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ly1p9zwioxjv33_tn.webp);">
                                             <!-- <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwz4r2fs9plne1_tn.webp" alt="Product image"> -->
@@ -427,7 +556,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__colum-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ly5yjw4ox5ltc4_tn.webp);"></div>
                                         <h4 class="home-product-item__name">Bộ dưỡng chất toàn diện 7 món ngăn ngừa lão hóa sớm đa tầng O HUI PRIME ADVANCER SET 370ML</h4>
@@ -468,7 +597,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__colum-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-ly5yanfns3a9b5_tn.webp);">                                        </div>
                                         <h4 class="home-product-item__name">Kem dưỡng ẩm sáng da căn bóng chứa Vitamin C giúp da săn hỗ trợ chống oxy hóa Miracle Toning Glow Cream 60ml</h4>
@@ -509,7 +638,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__colum-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-ly5yanf3swb4fc_tn.webp);"></div>
                                         <h4 class="home-product-item__name">[Mới] Tinh chất chống lão hóa sớm đa tầng OHUI Prime Advancer De-Aging Ampoule Serum 50ml</h4>
@@ -550,7 +679,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__colum-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-ly5yaolk2s3nef_tn.webp);"></div>
                                         <h4 class="home-product-item__name">[Limited Edition] Bộ dưỡng ẩm căng mượt sáng da toàn diện 6 món OHUI Miracle Moisture Pink Barrier Set 367ml</h4>
@@ -591,7 +720,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__colum-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-ly5yanf3swjn58_tn.webp);"></div>
                                         <h4 class="home-product-item__name">Kem chống nắng OHUI Day Shield Perfect Sun Black SPF50+ PA+++ 30ml</h4>
@@ -632,7 +761,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__colum-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-lwm9yq2ce4ezf7_tn.webp);"></div>
                                         <h4 class="home-product-item__name">[HB Gift] Bộ dưỡng 3 món cải thiện da lão hóa OHUI Age Recovery 3pcs Mini Kit Gimmick</h4>
@@ -673,7 +802,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__colum-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-ly5yapm70mu9a8_tn.webp);"></div>
                                         <h4 class="home-product-item__name">Thỏi chống nắng cấp ẩm mát da OHUI Day Shield Aqua Sun Stick To Go SPF50+/PA++++ 14g</h4>
@@ -714,7 +843,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__colum-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-ly5yangrqgtd08_tn.webp);"></div>
                                         <h4 class="home-product-item__name">[Limited Edition] Bộ phục hồi da lão hoá 3 món bổ sung Baby Collagen OHUI Age Recovery 3pcs Special Set 220ml</h4>
@@ -798,10 +927,11 @@
             </div>
         </div>
 
+        <!-- Footer -->
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row grid__row-upper-footer">
-                    <div class="grid__colum-2-4">
+            <div class="grid wide">
+                <div class="row row-upper-footer">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -815,21 +945,21 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__colum-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <a href="#" class="footer-item__link">Giới Thiệu về Piscey-Shop Việt Nam</a>
+                                <a href="#" class="footer-item__link">Giới Thiệu</a>
                             </li>
                             <li class="footer-item">
                                 <a href="#" class="footer-item__link">Tuyển dụng</a>
                             </li>
                             <li class="footer-item">
-                                <a href="#" class="footer-item__link">Điều khoản Piscey-Shop</a>
+                                <a href="#" class="footer-item__link">Điều khoản</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__colum-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Danh mục</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -843,7 +973,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__colum-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Theo dõi</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -866,7 +996,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__colum-2-4">
+                    <div class="col l-2-4 m-8 c-12">
                         <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer__download">
                             <img src="./assets/img/Navbar/app-qr-code.png" alt="QR app" class="footer__download-qr">
@@ -883,7 +1013,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <div class="footer__policy">
                         <a href="#" class="footer__policy-link">Chính sách bảo mật</a>
                         <a href="#" class="footer__policy-link">Quy chế hoạt động</a>
@@ -898,7 +1028,7 @@
                         <p class="footer__adress">Địa chỉ: Số 20, ngõ 538, đường Láng, quận Đống Đa, thành phố Hà Nội</p>
                         <p class="footer__company-number">Mã số doanh nghiệp: 0108838679 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015</p>
                         <p class="footer__text">© 2024 - Bản quyền thuộc về Công ty JP</p>
-                        <p class="footer__text">(Được code lại bởi JP)</p>
+                        <p class="footer__text" style="font-style: italic;">(Được code lại bởi JP theo hướng dẫn từ F8)</p>
                     </div>
                 </div>
             </div>
@@ -1008,3 +1138,4 @@
 
 
 <!-- Done (without Responsive): 30/7/2024 -->
+ <!-- Done (with Responsive): 4/8/2024 -->
